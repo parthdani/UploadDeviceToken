@@ -28,4 +28,4 @@ Similarly, 
 
 CleverTap **Account Id** and **Passcode** can be fetched from CleverTap Dashboard > Settings
 
-Example: ![alt text](http://url/to/img.png)
+Example: ![input](https://github.com/parthdani/UploadDeviceToken/blob/main/Screenshot%202021-06-17%20at%203.37.13%20AM.png)
