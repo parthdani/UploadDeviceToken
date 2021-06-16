@@ -10,11 +10,6 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 ANDROID_PREFIX = '__g'
 IOS_PREFIX = '-g'
-#PROFILE_FILE_NAME = 'profiles.csv'
-#API_PATH = "us1.api.clevertap.com"
-
-#PROJECT_ID = 'TEST-6K7-488-4Z6Z'
-#PROJECT_PASSCODE = 'WHQ-AQW-AHUL'
 
 CT_REGION = ''
 API_PATH = ''
@@ -33,15 +28,12 @@ COLUMN_CTID = "ctid"
 COLUMN_NAME = "Name"
 COLUMN_EMAIL = "Email Address"
 
-#COLUMN_EMAIL_OPT_IN = "Email Opt In?"
-#COLUMN_PUSH_OPT_IN = "Push Opt In?"
-
 COLUMN_CT_TYPE = "ct-type"
 
 CT_TOKEN_TYPE_FCM = "fcm"
 CT_TOKEN_TYPE_APNS = "apns"
 
-VAL_ANDROID = "Android OS"
+VAL_ANDROID = "Android"
 VAL_IOS = "ios"
 
 STR_OBJECT_ID = "objectId"
@@ -61,9 +53,6 @@ STR_TOKEN_DATA = "tokenData"
 
 STR_TRUE = "TRUE"
 STR_FALSE = "FALSE"
-
-STR_MSG_PUSH = "MSG-push"
-STR_MSG_EMAIL = "MSG-email"
 
 STR_D = "d"
 
@@ -216,18 +205,6 @@ def get_profile_payload(ctid, identity, name, email):
 
     if len(email) > 0:
         data[STR_EMAIL] = email
-    
-    '''if len(msg_email) > 0:
-        if msg_email == STR_TRUE:
-            data[STR_MSG_EMAIL] = True
-        else:
-            data[STR_MSG_EMAIL] = False
-
-    if len(msg_push) > 0:
-        if msg_push == STR_TRUE:
-            data[STR_MSG_PUSH] = True
-        else:
-            data[STR_MSG_PUSH] = False'''
 
     profile[STR_PROFILE_DATA] = data
 
@@ -251,8 +228,6 @@ def get_profiles_list(profiles):
             profile[COLUMN_USER_ID], 
             profile[COLUMN_NAME], 
             profile[COLUMN_EMAIL]
-            #profile[COLUMN_EMAIL_OPT_IN],
-            #profile[COLUMN_PUSH_OPT_IN]
             ))
     
     return profiles_list
